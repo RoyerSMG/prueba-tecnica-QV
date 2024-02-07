@@ -6,10 +6,8 @@ class actionRegistrarUsuario
         extract($_REQUEST);
         $u = new usuariosControl();
         $result = $u->registrarUsuario($nombre, $apellido, $correo, $password, $confirmar_password);
-        print_r($_REQUEST);
 
         $confirmar_password = $_POST["confirmar_password"];
-        print_r($nombre);
 
         switch ($result) {
             case 0:
@@ -25,26 +23,17 @@ class actionRegistrarUsuario
                 $response = [
                     "result" => "Fail",
                     "data" => "",
-                    "message" => "Ya Existe Un Registro Con El Mismo Email",
+                    "message" => "Registro No Creado",
                     "view" => "inicio"
                 ];
                 break;
 
             case 2:
                 $response = [
-                    "result" => "Fail",
-                    "data" => "",
-                    "message" => "Registro No Creado",
-                    "view" => "inicio"
-                ];
-                break;
-
-            case 3:
-                $response = [
                     "result" => "Success",
                     "data" => "",
                     "message" => "Registro Creado Satisfactoriamente",
-                    "view" => "formacionNet"
+                    "view" => "inicio"
                 ];
                 break;
         }
