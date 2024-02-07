@@ -1,0 +1,138 @@
+:root {
+    --color-titulos: #1D3A6C;
+    --fuente-titulo: 'Nunito', sans-serif;
+    --fuente-contenido: 'Open Sans', sans-serif;
+    --margen-inferior-titulo: 30px;
+    --tamaño-titulos-secciones: 26px;
+    --tamaño-contenido: 16px;
+}
+
+.contenido-section h1 {
+    color: var(--color-titulos);
+    font-family: var(--fuente-titulo);
+    text-align: center;
+}
+
+.container-section {
+    width: 1000px;
+    margin: 0 auto;
+    padding: 30px 30px 0 30px;
+}
+
+.primera-novedad img {
+    width: 480px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.segunda-columna img {
+    width: 230px;
+    height: 130px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.segunda-columna {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Dos columnas iguales */
+    gap: 20px; /* Espacio entre las columnas */
+}
+
+@media (max-width: 600px) {
+    .segunda-columna {
+        grid-template-columns: 1fr; /* Una sola columna */
+    }
+
+    .contenido-section h1 {
+        width: 400px;
+    }
+}
+
+.novedades {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Dos columnas iguales */
+    gap: 40px;
+}
+
+@media (max-width: 600px) {
+    .novedades {
+      grid-template-columns: 1fr; /* Una sola columna */
+    }
+
+    .primera-columna h2 {
+        width: 390px;
+    }
+
+    .novedades img {
+        width: 400px;
+        height: 200px;
+    }
+
+    .novedades h4 {
+        width: 390px;
+    }
+
+    .novedades p {
+        width: 400px;
+    }
+
+}
+
+.novedades p {
+    text-align: justify;
+}
+
+.novedades h4 {
+    text-align: center;
+    background-color: #1D3A6C;
+    color: white;
+    padding: 5px;
+    margin-top: 5px;
+    font-family: var(--fuente-titulo);
+}
+
+.primera-columna h2 {
+    text-align: center;
+    background-color: #1D3A6C;
+    color: white;
+    padding: 5px;
+    margin-top: 5px;
+}
+
+/* Registro */
+
+.registro {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Dos columnas iguales */
+    gap: 40px;
+}
+
+.registro img {
+    width: 480px;
+    height: 480px;
+}
+
+.formulario .checkbox {
+    display: flex;
+    
+}
+
+.formu-input {
+    width: 340px;
+}
+
+.boton-registrarse {
+    width: 100%;
+    background-color: #1D3A6C;
+    color: white;
+    height: 50px;
+}
+
+.formulario form {
+    width: 350px;
+}
+
+.checkbox input {
+    width: 20px;
+}

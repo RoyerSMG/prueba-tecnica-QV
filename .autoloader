@@ -1,0 +1,9 @@
+<?php
+session_start();
+    require_once "system/helper.php";
+    require_once "system/view.php";
+    require_once "config/.settings.inc";
+    require_once "config/.bd.inc";
+    require_once "bd/mysql.php";
+    require_once "models/usuariosModelo.class.php";
+    require_once "controllers/usuariosControl.class.php";

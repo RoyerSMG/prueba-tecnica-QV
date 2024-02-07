@@ -1,0 +1,367 @@
+:root {
+    --color-titulos: #1D3A6C;
+    --fuente-titulo: 'Nunito', sans-serif;
+    --fuente-contenido: 'Open Sans', sans-serif;
+    --margen-inferior-titulo: 30px;
+    --tamaño-titulos-secciones: 26px;
+    --tamaño-contenido: 16px;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: var(--fuente-contenido);
+    font-size: var(--tamaño-contenido);
+}
+
+
+
+/* Header navegacion */
+.header {
+    background-image: url(../img/fondo_header.png);
+    width: 100%;
+    height: 400px;
+
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+.header:before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: #1D3A6C;
+    position: absolute;
+    opacity: 0.6;
+}
+
+.menu-horizontal {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 1; /* Asegura que el menú horizontal tenga una z-index superior para estar por encima del contenido desplegado */
+}
+
+.menu-horizontal > li > a {
+    display: flex;
+    align-items: center;
+    padding: 30px 25px 30px 10px;
+    color: white;
+    text-decoration: none;
+}
+
+.menu-vertical {
+    position: absolute;
+    display: none;
+    list-style: none;
+    width: 225px;
+    background-color: white;
+    border-radius: 5px;
+    transition: transform 0.3s ease-out, margin-right 0.3s ease-out; /* Agrega transiciones suaves a transform y margin-right */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); 
+}
+
+.menu-vertical li:hover {
+    color: aquamarine;
+    transform: scale(1.1) translateX(15px); /* Ajusta el valor de escala y el desplazamiento hacia la derecha según tus preferencias */
+    margin-right: 5px; /* Ajusta el margen derecho para compensar el desplazamiento hacia la derecha */
+}
+
+.menu-vertical li a:hover {
+    color: aquamarine;
+    transform: scale(1.1) translateX(15px); /* Ajusta el valor de escala y el desplazamiento hacia la derecha según tus preferencias */
+    margin-right: 5px; /* Ajusta el margen derecho para compensar el desplazamiento hacia la derecha */
+}
+
+.menu-horizontal li:hover .menu-vertical {
+    display: block;
+    padding: 0px 20px 0px 20px;
+    /* margin: 0; */
+}
+
+.menu-vertical li {
+    display: block;
+    padding: 10px;
+    margin: 10px 0px;
+    border-bottom: 1px solid darkgrey;
+}
+
+.menu-vertical li:last-child {
+    border-bottom: none; /* Elimina el border-bottom para el último li */
+}
+
+.menu-vertical li a {
+    text-decoration: none;
+    color: black;
+}
+
+.logo img {
+    width: 150px;
+    height: 60px;
+}
+
+.barra {
+    display: flex;
+    align-items: center;
+    height: 90px; 
+} 
+
+.contenido-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 30px; 
+
+    position: relative;
+    font-family: var(--fuente-titulo);
+} 
+
+.login {
+    display: flex;
+    align-items: center;
+}
+
+.iniciar-sesion {
+    padding-right: 20px;
+    border-right: 2px solid white;
+}
+
+.search {
+    padding-left: 20px;
+    color: white;
+    display: flex;
+}
+
+.iniciar-sesion a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+}
+
+.icono-person {
+    margin-right: 10px;
+}
+
+/* Titulo de header */
+.titulo {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 50px;
+
+    color: white;
+    font-family: var(--fuente-titulo);
+}
+
+.titulo h1 {
+    width: 1100px;
+    height: 60px;
+    font-size: 50px;
+    font-weight:bold;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.titulo p {
+    width: 800px;
+    height: 50px;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 1.5;
+}
+
+/* main */
+.contenedor {
+    width: 1200px;
+    margin: 0 auto;
+    font-family: var(--fuente-titulo);
+    color: var(--color-titulos);
+}
+
+.titulo-contenedor {
+    text-align: center;
+    font-size: var(--tamaño-titulos-secciones);
+}
+
+.titulo-contenedor h3 {
+    margin-bottom: var(--margen-inferior-titulo);
+}
+
+.box img {
+    width: 200px;
+    height: 200px;
+    border: 1px solid gray;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); 
+}
+
+.box div {
+    width: 400px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.box {
+    display: flex;
+}
+
+.parallax {
+    background-image: url(../img/parallax.jpg);
+    width: 100%;
+    height: 350px;
+    margin-top: 60px;
+
+    background-position: top;
+    background-size: cover;
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.parallax:before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: #1D3A6C;
+    position: absolute;
+    opacity: 0.6;
+}
+
+.contenido-parallax {
+    position: absolute;
+    color: white;
+    width: 850px;
+    text-align: center;
+    font-family: var(--fuente-titulo);
+}
+
+.contenido-parallax p {
+    font-size: 16px;
+}
+
+.contenido-parallax h1 {
+    font-size: 40px;
+}
+
+/* Footer */
+.footer {
+    background-color: #243173;
+    width: 100%;
+    height: 550px;
+    margin-top: 30px;
+}
+
+.section-principal {
+    width: 100%;
+    height: 400px;
+
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid gray;
+}
+
+.contenido-section-principal {
+    width: 1320px;
+    margin: 0 auto;
+}
+
+.contenido-section-principal a{
+    text-decoration: none;
+    color: white;
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+.contenido-section-principal h4{
+    color: white;
+    font-size: 20px;
+    font-family: var(--fuente-titulo);
+    font-weight: 100;
+
+    margin: 0 0 30px 0;
+}
+
+.fila {
+    display: flex;
+}
+
+.contacto, 
+.soporte {
+    width: 300px;
+    padding: 0 15px;
+}
+
+.categorias,
+.certificaciones,
+.qvision {
+    width: 190px;
+    padding: 0 15px;
+}
+
+.section-secundaria {
+    width: 100%;
+    height: 150px;
+
+    display: flex;
+    align-items: center;
+}
+
+.contenido-section-secundaria {
+    width: 1320px;
+    margin: 0 auto;
+}
+
+.contenido-section-secundaria a{
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+}
+
+.footer-logo img {
+    width: 40px;
+    height: 40px;
+}
+
+.redes img {
+    width: 20px;
+    height: 20px;
+} 
+
+.segunda-fila {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.redes ul {
+    display: flex;
+    list-style: none;
+}
+
+.redes li {
+    padding: 0 0 0 20px;
+    margin: 0 8px 0 0;
+}
+
+.Copyright {
+    margin-top: 10px;
+    padding: 8px 0;
+}
+
+.Copyright p{
+    font-size: 14px;
+}
+
+

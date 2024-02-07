@@ -1,0 +1,60 @@
+
+<?php
+class frontController
+{
+    private $carpeta;
+    private $action;
+    private $params;
+    public function proccessRequest()
+    {
+        if (isset($_REQUEST["url"])) {
+            $myUrl = explode("/", trim($_REQUEST["url"]));
+            $llamado = array_shift($myUrl);
+
+            if ($llamado != "api" && $llamado != "web") {
+                showError("Peticion invalida", true);
+            }
+            if ($llamado == "api") {
+                define("CALL_API", true);  // Llamado por api
+            } else {
+                define("CALL_API", false);  //  LLamado por web
+            }
+
+            $complemento = $myUrl;
+            if (count($complemento) == 0) {
+                showError("Peticion invalida", true);
+            }
+
+            $this->carpeta = array_shift($myUrl);
+            $this->action = array_shift($myUrl);
+            $this->params = $myUrl;
+
+            $result = $this->dispatcher($this->action, $this->params);
+
+            if (CALL_API == true) {             
+                print_r(json_encode($result));
+            } else 
+            {
+                View::render($result);          //Redirecciono las vistas
+            }
+        } else {
+            print_r("Accion invalida...");
+        }
+    }
+
+    public function dispatcher($action, $params)
+    {
+        $filename = ACTIONS . "/" . $action . ".class.php";
+        if (is_file($filename)) {
+            require_once $filename;
+            if (!class_exists($action)) {
+                echo "clase no existe";
+            } else {
+                $cmd = new $action;
+                return $cmd->execute($params);
+            }
+        } else {
+            showError("Archivo no existe", true);
+        }
+    }
+}
