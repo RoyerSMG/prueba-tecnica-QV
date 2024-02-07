@@ -26,7 +26,6 @@ class usuariosModelo
                     INTO usuarios
                     VALUES (null, '$nombre', '$apellido', '$correo', '$password', '$confirmar_password')";
 
-        print_r($sql);
         $result = $this->conexion->query($sql);
         return $result;
     }
