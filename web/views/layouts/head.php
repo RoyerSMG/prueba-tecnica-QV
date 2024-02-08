@@ -11,4 +11,5 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/login.css">
     <link rel="stylesheet" href="assets/css/novedades.css">
+    <link rel="stylesheet" href="assets/css/aliados.css">
 </head>

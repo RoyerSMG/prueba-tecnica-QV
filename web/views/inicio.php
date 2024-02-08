@@ -53,9 +53,7 @@
             </div>
         </div>
     </section>
-    <section>
-        <div><h1 style="text-align: center;">Aliados aqui</h1></div>
-    </section>
+    <?php require_once "web/views/layouts/aliados.php" ?>
     <section class="container-section">
         <div class="contenido">
             <div class="registro">

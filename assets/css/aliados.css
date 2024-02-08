@@ -1,0 +1,45 @@
+:root {
+    --color-titulos: #1D3A6C;
+    --fuente-titulo: 'Nunito', sans-serif;
+    --fuente-contenido: 'Open Sans', sans-serif;
+    --margen-inferior-titulo: 30px;
+    --tamaño-titulos-secciones: 26px;
+    --tamaño-contenido: 16px;
+}
+
+
+.aliados-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 75%;
+    margin: auto;
+}
+
+.aliados-content img {
+    width: 220px;
+    /* height: 150px; */
+    height: auto;
+    padding: 20px;
+}
+
+.titulo-aliados {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid #1D3A6C;
+}
+
+.titulo-aliados h1{
+    color: var(--color-titulos);
+    font-family: var(--fuente-titulo);
+    font-size: var(--tamaño-titulos-secciones);
+}
+
+.titulo-aliados p{
+    color: var(--color-titulos);
+    font-family: var(--fuente-titulo);
+    margin: 0;
+}
