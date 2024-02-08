@@ -68,11 +68,13 @@
                             <h1 style="text-align: center; color: #1D3A6C;" >Registrate</h1>
                             <div>
                                 <label for="nombre">Nombre</label>
-                                <input class="formu-input" type="text" id="nombre" name="nombre">
+                                <input class="formu-input" type="text" id="nombre" name="nombre" oninput="validarEnTiempoReal()" required>
+                                <span style="color: red;" class="mensaje-validacion-nombre"></span>
                             </div>
                             <div>
                                 <label for="apellido">Apellido</label>
-                                <input class="formu-input" type="text" id="apellido" name="apellido">
+                                <input class="formu-input" type="text" id="apellido" name="apellido" oninput="validarEnTiempoReal()" required>
+                                <span style="color: red;" class="mensaje-validacion-apellido"></span>
                             </div>
                             <div>
                                 <label for="correo">Correo Electronico</label>
@@ -80,11 +82,13 @@
                             </div>
                             <div>
                                 <label for="password">Contraseña</label>
-                                <input class="formu-input" type="text" id="password" name="password">
+                                <input class="formu-input" type="text" id="password" name="password" oninput="validarContraseña()">
+                                <span class="mensaje-validacion-password"></span>
                             </div>
                             <div>
                                 <label for="confirmar_password">Confirmar Contraseña</label>
-                                <input class="formu-input" type="text" id="confirmar_password" name="confirmar_password">
+                                <input class="formu-input" type="text" id="confirmar_password" name="confirmar_password" oninput="validarContraseña()">
+                                <span class="mensaje-validacion-confirmacion"></span>
                             </div>
                             <div class="checkbox">
                                 <input type="checkbox" id="checkbox"><strong><a href="https://izyacademy.com/mod/page/view.php?id=3181">Acepto Términos y condiciones</a></strong>
