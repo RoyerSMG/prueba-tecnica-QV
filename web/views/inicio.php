@@ -69,16 +69,17 @@
                             <div>
                                 <label for="nombre">Nombre</label>
                                 <input class="formu-input" type="text" id="nombre" name="nombre" oninput="validarEnTiempoReal()" required>
-                                <span style="color: red;" class="mensaje-validacion-nombre"></span>
+                                <span class="mensaje-validacion-nombre"></span>
                             </div>
                             <div>
                                 <label for="apellido">Apellido</label>
                                 <input class="formu-input" type="text" id="apellido" name="apellido" oninput="validarEnTiempoReal()" required>
-                                <span style="color: red;" class="mensaje-validacion-apellido"></span>
+                                <span class="mensaje-validacion-apellido"></span>
                             </div>
                             <div>
                                 <label for="correo">Correo Electronico</label>
-                                <input class="formu-input" type="text" id="correo" name="correo">
+                                <input class="formu-input" type="text" id="correo" name="correo" oninput="validarCorreo()">
+                                <span class="mensaje-validacion-correo"></span>
                             </div>
                             <div>
                                 <label for="password">Contraseña</label>

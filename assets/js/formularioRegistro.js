@@ -32,6 +32,7 @@ function validarEnTiempoReal(input, mensajeValidacion) {
         if (!esValido) { // si no es valido no manda un mensaje de error
             input.classList.add('error');
             mensajeValidacion.textContent = 'Solo se permiten letras.';
+            mensajeValidacion.style.color = 'red';
         } else {   // si insertamos algo valido remueve el mensaje y permite escribir
             input.classList.remove('error');
             mensajeValidacion.textContent = '';
@@ -92,3 +93,34 @@ function validarContraseña() {
         actualizarMensajes(sonIguales);
     });
 }
+
+// Validar correo
+function validarCorreo() {
+    const inputCorreo = document.getElementById('correo');
+    const mensajeValidacionCorreo = document.querySelector('.mensaje-validacion-correo');
+
+    if (inputCorreo) {
+        inputCorreo.addEventListener('input', function(event) {
+            const valor = inputCorreo.value;
+            const regexCorreoElectronico = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+            const esValidoCorreo = regexCorreoElectronico.test(valor);
+
+            if (!esValidoCorreo) {
+                inputCorreo.classList.add('error');
+                mensajeValidacionCorreo.textContent = 'Ingresa un correo electrónico válido.';
+                mensajeValidacionCorreo.style.color = 'red';
+            } else {
+                inputCorreo.classList.remove('error');
+                mensajeValidacionCorreo.textContent = '';
+                mensajeValidacionCorreo.textContent = 'Correo Valido.';
+                mensajeValidacionCorreo.style.color = 'green';
+            }
+        });
+    }
+}
+
+// Llama a la función cuando se carga el contenido del documento
+document.addEventListener('DOMContentLoaded', function() {
+    validarCorreo();
+});
