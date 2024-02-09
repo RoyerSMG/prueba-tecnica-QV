@@ -30,21 +30,21 @@
                     </div>
                     <div class="tercera-novedad">
                         <img src="assets/img/novedad3.jpg" alt="novedad2">
-                        <h4>Generación de comunidad</h4>
+                        <h4>Transferencia de conocimiento</h4>
                         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quod unde dolor quas soluta
                             dignissimos possimus, obcaecati sapiente architecto culpa velit similique harum aut commodi
                             recusandae.</p>
                     </div>
                     <div class="cuarta-novedad">
                         <img src="assets/img/novedad4.jpg" alt="novedad2">
-                        <h4>Generación de comunidad</h4>
+                        <h4>Certificaciones e insignias</h4>
                         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quod unde dolor quas soluta
                             dignissimos possimus, obcaecati sapiente architecto culpa velit similique harum aut commodi
                             recusandae</p>
                     </div>
                     <div class="quinta-novedad">
                         <img src="assets/img/novedad5.jpg" alt="novedad2">
-                        <h4>Generación de comunidad</h4>
+                        <h4>Apropiacion del conocimiento</h4>
                         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quod unde dolor quas soluta
                             dignissimos possimus, obcaecati sapiente architecto culpa velit similique harum aut commodi
                             recusandae.</p>
